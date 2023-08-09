@@ -56,6 +56,17 @@ sayHello: {
     responseSerialize: serialize_helloworld_HelloReply,
     responseDeserialize: deserialize_helloworld_HelloReply,
   },
+  sayHelloStreamReply: {
+    path: '/helloworld.Greeter/SayHelloStreamReply',
+    requestStream: false,
+    responseStream: true,
+    requestType: helloworld_pb.HelloRequest,
+    responseType: helloworld_pb.HelloReply,
+    requestSerialize: serialize_helloworld_HelloRequest,
+    requestDeserialize: deserialize_helloworld_HelloRequest,
+    responseSerialize: serialize_helloworld_HelloReply,
+    responseDeserialize: deserialize_helloworld_HelloReply,
+  },
 };
 
 exports.GreeterClient = grpc.makeGenericClientConstructor(GreeterService);

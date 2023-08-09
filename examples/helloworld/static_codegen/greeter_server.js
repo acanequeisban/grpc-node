@@ -40,6 +40,9 @@ function main() {
   server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), () => {
     server.start();
   });
+  /*server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createSsl, () => {
+    server.start();
+  });*/
 }
 
 main();
