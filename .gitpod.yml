@@ -6,5 +6,6 @@
 
 tasks:
   - init: npm install
+    command: cd /workspace/grpc-node/examples/helloworld/static_codegen
 
 
